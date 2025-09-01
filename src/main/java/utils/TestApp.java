@@ -60,6 +60,10 @@ public class TestApp {
         driver.get(url);
     }
 
+    public void naviagateBack(){
+        driver.navigate().back();
+    }
+
     public void closeBrowser() {
         driver.quit();
     }
