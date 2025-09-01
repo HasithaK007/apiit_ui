@@ -1,5 +1,6 @@
 package utils;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -49,13 +50,13 @@ public class TestApp {
         //String chromeDriverPath = property.getProperty("config", getChromeDriverFilePath());
         //System.setProperty("webdriver.chrome.driver","/Users/kishann/Documents/Personal/B27/Day3/src/main/resources/chromedriver 4");
         //System.setProperty("webdriver.chrome.driver", getChromeDriverFilePath());
-        //WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
     public void navigateToURL() {
-        String url = property.getProperty("config", "url1");
+        String url = property.getProperty("config", "url");
         driver.get(url);
     }
 
